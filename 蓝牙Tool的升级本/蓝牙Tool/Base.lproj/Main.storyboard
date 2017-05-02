@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="9cw-wk-KDs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="JsS-QI-g3s">
+            <objects>
+                <navigationController id="9cw-wk-KDs" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qoz-hV-7lO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="qkP-Ue-8Nc" kind="relationship" relationship="rootViewController" id="fLX-Ss-XyO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="meB-bh-MN1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="398" y="287"/>
+        </scene>
+        <!--小米手环-->
+        <scene sceneID="tuw-ei-7dX">
+            <objects>
+                <viewController id="qkP-Ue-8Nc" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cr1-5F-O9J"/>
+                        <viewControllerLayoutGuide type="bottom" id="yJY-x9-LnA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Mze-aA-Opq">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rM0-Ci-ETs">
+                                <rect key="frame" x="35.5" y="135" width="303" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91598760410000002" blue="0.22139255059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="连接手环"/>
+                                <connections>
+                                    <action selector="startConnectAction:" destination="qkP-Ue-8Nc" eventType="touchUpInside" id="zaq-Vn-wl4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BE5-g0-QPb">
+                                <rect key="frame" x="36" y="235" width="303" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91598760410000002" blue="0.22139255059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="震动"/>
+                                <connections>
+                                    <action selector="shakeBankAction:" destination="qkP-Ue-8Nc" eventType="touchUpInside" id="EH2-Yr-K4o"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e6v-lD-ZNZ">
+                                <rect key="frame" x="36" y="285" width="303" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91598760410000002" blue="0.22139255059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="停止震动"/>
+                                <connections>
+                                    <action selector="stopShakeAction:" destination="qkP-Ue-8Nc" eventType="touchUpInside" id="7zx-su-mNY"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="wTm-nZ-aZn">
+                                <rect key="frame" x="177" y="81" width="20" height="20"/>
+                            </activityIndicatorView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="chI-aC-6v8">
+                                <rect key="frame" x="36" y="355" width="303" height="252"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Ut-lw-BjZ">
+                                <rect key="frame" x="35.5" y="185" width="303" height="30"/>
+                                <color key="backgroundColor" red="1" green="0.91598760410000002" blue="0.22139255059999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="断开手环"/>
+                                <connections>
+                                    <action selector="disConnectAction:" destination="qkP-Ue-8Nc" eventType="touchUpInside" id="YWH-Mm-aOU"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="7Ut-lw-BjZ" firstAttribute="centerX" secondItem="Mze-aA-Opq" secondAttribute="centerX" id="2xo-wf-LCN"/>
+                            <constraint firstItem="BE5-g0-QPb" firstAttribute="top" secondItem="7Ut-lw-BjZ" secondAttribute="bottom" constant="20" id="4O4-Qv-Yaz"/>
+                            <constraint firstItem="rM0-Ci-ETs" firstAttribute="centerX" secondItem="Mze-aA-Opq" secondAttribute="centerX" id="5la-js-ceh"/>
+                            <constraint firstItem="e6v-lD-ZNZ" firstAttribute="leading" secondItem="Mze-aA-Opq" secondAttribute="leadingMargin" constant="20" id="HTr-Tt-NEr"/>
+                            <constraint firstItem="wTm-nZ-aZn" firstAttribute="top" secondItem="cr1-5F-O9J" secondAttribute="bottom" constant="17" id="Kek-5I-bXc"/>
+                            <constraint firstItem="chI-aC-6v8" firstAttribute="top" secondItem="e6v-lD-ZNZ" secondAttribute="bottom" constant="40" id="NG1-pr-S0C"/>
+                            <constraint firstItem="7Ut-lw-BjZ" firstAttribute="top" secondItem="rM0-Ci-ETs" secondAttribute="bottom" constant="20" id="QSg-rL-09u"/>
+                            <constraint firstAttribute="bottom" secondItem="chI-aC-6v8" secondAttribute="bottom" constant="60" id="TDT-EM-hjq"/>
+                            <constraint firstItem="rM0-Ci-ETs" firstAttribute="top" secondItem="wTm-nZ-aZn" secondAttribute="bottom" constant="34" id="URJ-d7-cew"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="e6v-lD-ZNZ" secondAttribute="trailing" constant="20" id="Ut6-D3-cCH"/>
+                            <constraint firstItem="chI-aC-6v8" firstAttribute="centerX" secondItem="Mze-aA-Opq" secondAttribute="centerX" id="Vee-nX-RU1"/>
+                            <constraint firstItem="wTm-nZ-aZn" firstAttribute="centerX" secondItem="Mze-aA-Opq" secondAttribute="centerX" id="X9v-7h-jla"/>
+                            <constraint firstItem="e6v-lD-ZNZ" firstAttribute="centerX" secondItem="Mze-aA-Opq" secondAttribute="centerX" id="aaf-Yg-5Ev"/>
+                            <constraint firstItem="chI-aC-6v8" firstAttribute="width" secondItem="e6v-lD-ZNZ" secondAttribute="width" id="eVv-hu-PaM"/>
+                            <constraint firstItem="BE5-g0-QPb" firstAttribute="centerX" secondItem="Mze-aA-Opq" secondAttribute="centerX" id="efO-gF-8q1"/>
+                            <constraint firstItem="e6v-lD-ZNZ" firstAttribute="width" secondItem="BE5-g0-QPb" secondAttribute="width" id="hDJ-MQ-YCZ"/>
+                            <constraint firstItem="7Ut-lw-BjZ" firstAttribute="width" secondItem="rM0-Ci-ETs" secondAttribute="width" id="laK-xS-p0U"/>
+                            <constraint firstItem="BE5-g0-QPb" firstAttribute="width" secondItem="7Ut-lw-BjZ" secondAttribute="width" id="s4G-mt-qNb"/>
+                            <constraint firstItem="e6v-lD-ZNZ" firstAttribute="top" secondItem="BE5-g0-QPb" secondAttribute="bottom" constant="20" id="yFV-99-IPV"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="小米手环" id="7W3-hb-a6a"/>
+                    <connections>
+                        <outlet property="activeID" destination="wTm-nZ-aZn" id="rqz-qv-Pr1"/>
+                        <outlet property="connectBtn" destination="rM0-Ci-ETs" id="bkt-V0-a1b"/>
+                        <outlet property="resultTextV" destination="chI-aC-6v8" id="mMk-as-3To"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="drh-lz-hYZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="278"/>
+        </scene>
+    </scenes>
+</document>
